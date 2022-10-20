@@ -16,7 +16,7 @@ class ProyekController extends Controller
     public function index()
     {
         $datas = Proyek::all();
-        return view('frontend.proyek.index',compact('datas'));
+        return view('frontend.proyek.index', compact('datas'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ProyekController extends Controller
     public function create()
     {
         $desa = Desa::all();
-        return view('frontend.proyek.create',compact('desa'));
+        return view('frontend.proyek.create', compact('desa'));
     }
 
     /**
@@ -48,7 +48,7 @@ class ProyekController extends Controller
         // $model->save();
 
         $data = Proyek::create($request->all());
-        if($request->hasFile('foto')){
+        if ($request->hasFile('foto')) {
             $request->file('foto')->move('storage/posts/', $request->file('foto')->getClientOriginalName());
             $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
@@ -101,6 +101,6 @@ class ProyekController extends Controller
     {
         $model = Proyek::find($id);
         $model->delete();
-        return redirect(url('proyek')); 
+        return redirect(url('proyek'));
     }
 }
