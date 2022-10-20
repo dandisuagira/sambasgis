@@ -51,7 +51,7 @@ Route::get('/analisis', [App\Http\Controllers\BerandaController::class, 'analisi
 // Route::resource('keluhan', KeluhanController::class);
 
 
-
+//sa
 //kecamatan numpang di controller desa dulu
 Route::get('/kecamatan_index', [App\Http\Controllers\DesaController::class, 'kecamatan'])->name('kecamatan_index'); //kecamatan peta
 
