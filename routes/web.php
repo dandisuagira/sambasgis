@@ -22,7 +22,7 @@ use App\Http\Controllers\StuntingController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//hahahhahaha
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -57,14 +57,14 @@ Route::get('/kecamatan_index', [App\Http\Controllers\DesaController::class, 'kec
 
 //1 adm desa test
 Route::get('/desa_index', [App\Http\Controllers\DesaController::class, 'desa'])->name('desa_index'); //desa peta
-//2 luas presentase wilayah 
+//2 luas presentase wilayah
 Route::get('/luasdesa_index', [App\Http\Controllers\DesaController::class, 'luasdesa'])->name('luasdesa_index'); //desa peta
 Route::get('/chartjs', [App\Http\Controllers\DesaController::class, 'chartjs'])->name('chartjs'); //CHART js
 //Route::get('/desa_index', [App\Http\Controllers\DesaController::class, 'index'])->name('desa_index'); //desa index
 
 Route::middleware(['auth'])->group(function () {
 });
-//desa resource 
+//desa resource
 Route::resource('desa', DesaController::class);
 
 //dusun peta
@@ -76,7 +76,7 @@ Route::resource('dusun', DusunController::class);
 Route::get('/penduduk_index', [App\Http\Controllers\PendudukController::class, 'penduduk'])->name('penduduk_index'); //penduduk peta
 Route::resource('penduduk', PendudukController::class);
 
-//kesehatan 
+//kesehatan
 Route::get('/kesehatan_index', [App\Http\Controllers\KesehatanController::class, 'kesehatan'])->name('kesehatan_index'); //kesehatan peta
 // Route::resource('kesehatan', KesehatanController::class); blm dipakai
 
@@ -91,17 +91,17 @@ Route::get('/puskesmas/{puskesmas}', [App\Http\Controllers\KesehatanController::
 Route::get('/puskesmas/{puskesmas}/edit', [App\Http\Controllers\KesehatanController::class, 'editPuskesmas'])->name('editPuskesmas'); //edit puskesmas
 
 
-//pendidikan 
+//pendidikan
 Route::get('/pendidikan_index', [App\Http\Controllers\PendidikanController::class, 'pendidikan'])->name('pendidikan_index'); //kesehatan peta
 
-//stunting 
+//stunting
 Route::resource('stunting', StuntingController::class);
 Route::get('/stunting_index', [App\Http\Controllers\StuntingController::class, 'stunting'])->name('stunting_index'); //stunting peta
 
-//kawasan 
+//kawasan
 Route::get('/kawasan_index', [App\Http\Controllers\KawasanController::class, 'kawasan'])->name('kawasan_index'); //kawasan peta
 
-//Idm 
+//Idm
 Route::get('/idm_index', [App\Http\Controllers\IdmController::class, 'idm'])->name('idm_index'); //idm peta
 
 //proyek resource
